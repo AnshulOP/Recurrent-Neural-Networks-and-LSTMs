@@ -2,7 +2,7 @@
                       
 RNNs are a special kind of neural network designed to handle sequential data, such as time series data, text, or speech. Unlike traditional neural networks where each layer operates independently, RNNs have internal connections that allow them to process information from previous steps in the sequence. This "memory" capability makes them powerful tools for tasks like language translation, speech recognition, and time series forecasting.
 
-### Basic Architecture
+## Basic Architecture
 An RNN can be visualized as a loop or chain of interconnected processing units. Here's a breakdown of the key components:
 
 **Input Layer:** Receives the data at each time step. For example, in a sentence, each word would be an input vector.
@@ -11,7 +11,7 @@ An RNN can be visualized as a loop or chain of interconnected processing units. 
 
 **Output Layer:** Generates the output for each time step. This could be a classification (e.g., identifying the part of speech for a word) or a prediction (e.g., the next word in a sentence).
 
-### Working of RNNs
+## Working of RNNs
 Here's how information flows through an RNN:
 
 **Initialization:** The hidden state (h) is initialized with zeros or some other starting value.
@@ -28,5 +28,5 @@ Here's how information flows through an RNN:
 
 **Key Point:** Sharing weights across all time steps allows the RNN to learn a single set of parameters that can be applied to any sequence length. This is efficient but can lead to limitations, discussed later.
 
-### Backpropagation Through Time (BPTT)
+## Backpropagation Through Time (BPTT)
 Training RNNs involves adjusting the weights based on the difference between the predicted and actual outputs. This process is called backpropagation. However, in RNNs, the output at a given time step depends on all previous inputs and hidden states. To address this, a modified version of backpropagation called Backpropagation Through Time (BPTT) is used. BPTT unfolds the RNN across time steps, essentially creating a much deeper network. It then calculates the gradients for each weight considering its influence on all subsequent outputs.
